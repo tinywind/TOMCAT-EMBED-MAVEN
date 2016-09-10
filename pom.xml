@@ -15,20 +15,20 @@
         maven plugin for embedded-tomcat
     </description>
 
-    <url>https://github.com/tinywind/tomcat-embed-maven</url>
+    <url>https://github.com/tinywind/TOMCAT-EMBED-MAVEN</url>
 
     <licenses>
         <license>
             <name>Licensed under the Apache License, Version 2.0</name>
-            <url>https://raw.githubusercontent.com/tinywind/tomcat-embed-maven/master/LICENSE.txt</url>
+            <url>https://raw.githubusercontent.com/tinywind/TOMCAT-EMBED-MAVEN/master/LICENSE.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <scm>
-        <developerConnection>https://github.com/tinywind/tomcat-embed-maven.git</developerConnection>
-        <url>https://github.com/tinywind/tomcat-embed-maven.git</url>
-        <connection>git://github.com/tinywind/tomcat-embed-maven.git</connection>
+        <developerConnection>https://github.com/tinywind/TOMCAT-EMBED-MAVEN.git</developerConnection>
+        <url>https://github.com/tinywind/TOMCAT-EMBED-MAVEN.git</url>
+        <connection>git://github.com/tinywind/TOMCAT-EMBED-MAVEN.git</connection>
         <tag>HEAD</tag>
     </scm>
 
@@ -43,7 +43,7 @@
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/tinywind/tomcat-embed-maven/issues</url>
+        <url>https://github.com/tinywind/TOMCAT-EMBED-MAVEN/issues</url>
     </issueManagement>
 
     <parent>
@@ -248,37 +248,6 @@
                 <configuration>
                     <downloadSources>true</downloadSources>
                     <downloadJavadocs>true</downloadJavadocs>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <version>2.5.4</version>
-                <extensions>true</extensions>
-                <executions>
-                    <execution>
-                        <id>bundle-manifest</id>
-                        <phase>process-classes</phase>
-                        <goals>
-                            <goal>manifest</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <supportedProjectTypes>
-                        <supportedProjectType>jar</supportedProjectType>
-                    </supportedProjectTypes>
-                    <instructions>
-                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Export-Package>*</Export-Package>
-                        <Import-Package>
-                            javax.persistence;resolution:=optional,
-                            org.apache.log4j;resolution:=optional,
-                            *
-                        </Import-Package>
-                        <_versionpolicy>[$(version;==;$(@)),$(version;+;$(@)))</_versionpolicy>
-                    </instructions>
                 </configuration>
             </plugin>
 
