@@ -1,5 +1,7 @@
 #maven plugin for embedded-tomcat
 
+The embedded runtime uses Tomcat 9.0.123 and the javax.servlet API. The plugin artifact version is independent of the Tomcat runtime version.
+
 #Configure Maven
 ```
     <build>

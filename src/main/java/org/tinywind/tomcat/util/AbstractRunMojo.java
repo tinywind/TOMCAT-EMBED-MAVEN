@@ -111,6 +111,7 @@ public abstract class AbstractRunMojo extends AbstractMojo {
         resources.addPreResources(new DirResourceSet(resources, webAppMount, new File(project.getBuild().getOutputDirectory()).getAbsolutePath(), "/"));
         context.setResources(resources);
         tomcat.setPort(port);
+        tomcat.getConnector();
 
         getLog().info("Start TOMCAT-EMBED");
         tomcat.start();
